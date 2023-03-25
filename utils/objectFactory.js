@@ -44,6 +44,18 @@ let modelFactory = function(dbModel, dbObj){
 			description:String
 		});
 		model = dbObj.model(dbModel,schema);
+	} else if (dbModel === 'currency'){
+		schema = new dbObj.Schema({
+			id:{
+				type:String,
+				required:true,
+				unique: true,
+				index: true
+			},
+			code:String,
+			description:String
+		});
+		model = dbObj.model(dbModel,schema);
 	}
 
 	return model;
