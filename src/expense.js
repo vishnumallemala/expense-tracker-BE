@@ -1,4 +1,4 @@
-const dao = require('../model/dao');
+const dao = require('../connectors/mongo-connector');
 const dbTable = 'expense';
 const daoObj = new dao(dbTable);
 class Expense{
