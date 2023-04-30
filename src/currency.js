@@ -9,7 +9,7 @@ class Category{
 					if(err){
 						cb(err);
 					}
-				},true);
+				});
 			});
 			cb(null,'Data Inserted');
 		} else {
@@ -20,7 +20,7 @@ class Category{
 				else{
 					cb(null, resp);
 				}
-			},false);
+			});
 		}
 	}
 
